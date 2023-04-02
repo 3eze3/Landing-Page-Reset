@@ -1,0 +1,69 @@
+@use "../abtract/varibles" as colors_size;
+@font-face {
+  font-family: primary;
+  src: url(../assets/font_family_ubuntu/Ubuntu-Bold.ttf);
+}
+@font-face {
+  font-family: second;
+  src: url(../assets/font_family_ubuntu/Ubuntu-Regular.ttf);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 100%;
+  hyphens: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3 {
+  font-family: primary;
+}
+
+h1,
+h2 {
+  font-size: colors_size.$lg;
+}
+
+h3 {
+  font-size: colors_size.$rg;
+}
+
+h1 {
+  color: colors_size.$soft-dark;
+}
+
+h2 {
+  color: colors_size.$soft-teal;
+}
+
+h3 {
+  color: colors_size.$ligth-teal;
+}
+
+p,
+span,
+button,
+a {
+  font-family: second;
+}
+
+p {
+  font-size: colors_size.$md;
+  color: colors_size.$soft-blue;
+}
+
+button {
+  font-size: colors_size.$sm;
+  color: colors_size.$cyan;
+  background-color: #fff;
+}
+a {
+  color: colors_size.$gray-cyan;
+  &:hover {
+    color: colors_size.$gray-dark;
+  }
+}
