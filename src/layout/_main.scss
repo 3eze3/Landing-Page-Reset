@@ -1,0 +1,11 @@
+@use "../abtract/mixins" as layout_bxsha;
+@use "../abtract/varibles" as bg_colors;
+.recipes {
+  width: 100%;
+  min-height: 150vh;
+  padding: 1rem;
+  position: relative;
+  border-top-left-radius: 1.8rem;
+  border-top-right-radius: 1.8rem;
+  background-color: bg_colors.$main;
+}
