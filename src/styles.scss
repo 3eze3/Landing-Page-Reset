@@ -5,7 +5,9 @@
 @use "layout/main";
 @use "layout/footer";
 // ---------   Components ---------
-@use "components/menu";
-@use "components/categories";
+@use "components/text_hidden";
 @use "components/button";
 @use "components/advertencia";
+@use "components/menu";
+@use "components/categories";
+@use "components/form";
