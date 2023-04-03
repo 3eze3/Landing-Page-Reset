@@ -8,4 +8,10 @@
   border-top-left-radius: 1.8rem;
   border-top-right-radius: 1.8rem;
   background-color: bg_colors.$main;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 2rem;
+  &__cards {
+    min-height: 40rem;
+  }
 }
