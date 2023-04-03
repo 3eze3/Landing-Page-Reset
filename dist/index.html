@@ -32,49 +32,116 @@
         </div>
       </section>
     </header>
-    <!--  -->
-    <!-- Categorias y conteno de resetas -->
     <section class="categories">
       <h2 class="categories__title">Summary of recipes</h2>
-      <!-- Lista de categorias  -->
+      <div class="categories__circle">
+        <span class="categories__count">0</span>
+        <span class="categories__name"> Resetas</span>
+      </div>
       <ul class="categories__list">
+        <h3 class="categories__listTitle">Categories:</h3>
         <li class="categories__item" id="all-recipes">All recipes</li>
         <li class="categories__item" id="main-courses">Main Courses</li>
         <li class="categories__item" id="desserts">Dessers</li>
         <li class="categories__item" id="other">Others</li>
       </ul>
+      <img
+        class="categories__ilustration"
+        src="../assets/images/breakfast-categories.svg"
+        alt
+        aria-hidden="true" />
     </section>
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!-- Agregar resetas -->
-    <section class="hidden">
-      <h2></h2>
-      <!-- <button></button> position absolute -->
-      <!-- Formulario-->
-      <form action=""></form>
-    </section>
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!-- Main -->
-    <main class=""></main>
+    <main class="recipes">
+      <section class="addRecipes">
+        <h2 class="hidden">Form add your recipes</h2>
+        <div class="addRecipes__flag">
+          <span class="addRecipes__recipe">Add your recipes</span>
+          <button class="addRecipes__display" tabindex="1">>></button>
+        </div>
+        <!-- Formulario -->
+        <form action="#" class="addRecipes__register register">
+          <!-- ------------------------------------------1 -->
+          <fieldset class="register__introduccion">
+            <legend class="hidden">Name and description of the recipe</legend>
+            <label class="register__title">
+              Title recipe:
+              <input
+                class="reister__input"
+                name="recipe_name"
+                type="text"
+                placeholder="Write recipes name" />
+            </label>
+            <label class="register__description">
+              Description:
+              <textarea
+                class="register__inputArea"
+                name="recipe_description"
+                placeholder="Your description..."></textarea>
+            </label>
+          </fieldset>
+          <!-- ------------------------------------------2 -->
+          <fieldset class="register__recipe">
+            <legend class="register__nameList">Ingredientes</legend>
+            <button class="register__more">+</button>
+            <!-- Listas  ingredientes -->
+            <ol class="register__list">
+              <!-- ingredient -->
+              <li class="register__item">
+                <label class="register__recipeCount">
+                  1.
+                  <input
+                    class="register__input register__input--recipe"
+                    type="text"
+                    placeholder="Ingrediente 1" />
+                  <span>X</span>
+                </label>
+              </li>
+            </ol>
+          </fieldset>
+          <!-- ------------------------------------------3 -->
+          <fieldset class="register__recipe">
+            <legend class="register__nameList">Paso a segir</legend>
+            <button class="register__more">+</button>
+            <ol class="register__list">
+              <li class="register__item">
+                <label class="register__recipeCount">
+                  1.
+                  <input
+                    class="register__input register__input--recipe"
+                    type="text"
+                    placeholder="Paso 1" />
+                  <span>X</span>
+                </label>
+              </li>
+            </ol>
+          </fieldset>
+          <!-- ------------------------------------------4 -->
+          <div class="register__wrapper">
+            <button class="register__save button">Guardar</button>
+            <button class="register__cancel button">Cancelar</button>
+          </div>
+        </form>
+      </section>
+      <!-- Resetas GENERADAS DINAMICAMENTES  -->
+    </main>
     <!--  -->
     <!--  -->
     <!--  -->
     <!--  -->
     <!-- Footer -->
-    <footer class="">
+    <!-- <footer class="">
       <nav class="">
         <ul class="">
-          <li class=""><a class="" href=""></a></li>
-          <li class=""><a class="" href=""></a></li>
-          <li class=""><a class="" href=""></a></li>
-          <!-- <a href="https://storyset.com/people">People illustrations by Storyset</a> -->
+          <li class=""><a class="" href="">Github</a></li>
+          <li class=""><a class="" href="">Linkedin</a></li>
+          <li class=""><a class="" href="">Frontend Mentor</a></li>
+          <li>
+            <a href="https://storyset.com/people"
+              >People illustrations by Storyset</a
+            >
+          </li>
         </ul>
       </nav>
-    </footer>
+    </footer> -->
   </body>
 </html>
