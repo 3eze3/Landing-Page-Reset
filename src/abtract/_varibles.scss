@@ -13,14 +13,14 @@ $cyan: #0a6265;
 $soft-blue: #88a09b;
 // ------------- Bg-Body-Cards -------------
 $nav: #3e968729;
-$categories-footer: linear-gradient(90deg, #dfdedeae, #21967727, #008f6b8a);
-$agregar-resetas: #041515;
+$categories-footer: linear-gradient(90deg, #dfdedeae, #07281f27, #008f6b8a);
+$agregar-resetas: #041818;
 $main: #50a196;
 $body: radial-gradient(
-  180deg,
-  rgba(24, 162, 137, 0.431),
-  rgba(4, 91, 99, 0.152),
-  #ffffff
+  circle at top,
+  #ffffff,
+  rgba(24, 162, 137, 0.268),
+  rgba(88, 156, 164, 0.529)
 );
 // ------------- Colors links -------------
 $gray-cyan: #3c545e;
