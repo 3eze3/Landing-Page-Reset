@@ -9,6 +9,11 @@
   border-bottom-right-radius: 1.8rem;
   background-image: colors_bg.$categories-footer;
   @include layout_shadows.flex($direction: column, $gap: 2rem);
+  transform: translateX(130rem);
+  &__show {
+    transform: translateX(0);
+    transition: transform 0.5s linear;
+  }
   &__title {
     @include layout_shadows.text-neo(0.2rem, #043b2c85);
   }
