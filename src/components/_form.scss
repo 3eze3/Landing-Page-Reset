@@ -1,6 +1,82 @@
+@use "../abtract/mixins" as layout_shadows;
+@use "../abtract/varibles" as bg_colors;
 .register {
   width: 100%;
-  height: 40rem;
-  &__ {
+  height: 100%;
+  &__introduction {
+    margin-bottom: 1rem;
+  }
+  &__label {
+    //
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 1rem;
+    //
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  &__input {
+    flex: 60%;
+    text-align: center;
+    padding-block: 0.5rem;
+    font-size: 1.1rem;
+    @include layout_shadows.shadow-neo(0.4rem, #06212511, 100%, inset);
+    &--area {
+      width: 100%;
+      height: 8.625rem;
+      resize: none;
+    }
+    &--recipe {
+      width: 100%;
+      font-size: 0.9rem;
+    }
+    &:focus {
+      background-image: linear-gradient(
+        to top,
+        rgba(12, 95, 103, 0.113),
+        rgba(255, 255, 255, 0.037)
+      );
+      outline: transparent;
+    }
+  }
+
+  &__recipe {
+    margin-block: 1rem;
+  }
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 1rem;
+  }
+  &__wrapperList {
+    min-height: 3rem;
+    //
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    //
+    margin-bottom: 1rem;
+  }
+  &__btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+  &__add {
+    text-align: center;
+    font-size: 2em;
+    line-height: 0.75;
+  }
+  &__wrapper {
+    margin-top: 2rem;
+    //
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    //
   }
 }
