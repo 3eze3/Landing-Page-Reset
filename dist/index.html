@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="" defer></script>
+
     <title>Think your flavors</title>
   </head>
   <body>
@@ -32,6 +32,7 @@
         </div>
       </section>
     </header>
+    <!--  -->
     <section class="categories">
       <h2 class="categories__title">Summary of recipes</h2>
       <div class="categories__circle">
@@ -51,6 +52,7 @@
         alt
         aria-hidden="true" />
     </section>
+    <!--  -->
     <main class="recipes">
       <section class="addRecipes">
         <h2 class="hidden">Form add your recipes</h2>
@@ -123,6 +125,17 @@
           </div>
         </form>
       </section>
+
+      <div id="mi-modal" class="modal">
+        <div class="modal__content">
+          <span class="modal__close">&times;</span>
+          <h2>¡Ey , cuidado!</h2>
+          <p>Una vez eliminado no se podra recupar, jamas de los jamases</p>
+          <div class="register__wrapper">
+            <button class="button button__remove">Aceptar</button>
+          </div>
+        </div>
+      </div>
       <!-- Resetas GENERADAS DINAMICAMENTES  -->
     </main>
     <footer class="footer">
@@ -149,4 +162,5 @@
       </nav>
     </footer>
   </body>
+  <script src="../src/app/app.js" defer></script>
 </html>
