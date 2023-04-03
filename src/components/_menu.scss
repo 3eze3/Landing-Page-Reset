@@ -1,0 +1,45 @@
+@use "../abtract/mixins" as layout_shadows;
+@use "../abtract/varibles" as bg_colors;
+.addRecipes {
+  width: 27rem;
+  min-height: 45rem;
+  padding: 2rem;
+  position: absolute;
+  @include layout_shadows.shadow-neo(0.4rem, #06212522, 98%, inset);
+  border-radius: 1rem;
+  transition: left 0.25s ease-in;
+  &__close {
+    left: -26.99rem;
+    transition: left 0.25s ease-in;
+  }
+  &__flag {
+    width: 18rem;
+    padding-block: 0.5rem;
+    padding-inline: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem -0.5rem 1rem #ffffff41;
+    @include layout_shadows.flex($justify: flex-start);
+    position: absolute;
+    right: -18rem;
+    top: calc(50% - 2.25rem);
+  }
+  &__display {
+    width: 4rem;
+    height: 4rem;
+    padding-inline: 1rem;
+    font-size: 2em;
+    font-weight: 900;
+    border-radius: 50%;
+    &--active {
+      transform: rotate(180deg);
+      padding-bottom: 0.2rem;
+      transition: 0.25s ease-out 0.63s;
+    }
+  }
+  &__recipe {
+    font-size: 1.5em;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+}
