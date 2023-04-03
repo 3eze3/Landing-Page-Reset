@@ -1,0 +1,52 @@
+@use "../abtract/varibles" as colors_bg;
+@use "../abtract/mixins" as layout_shadows;
+.categories {
+  width: 100%;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  position: relative;
+  border-bottom-left-radius: 1.8rem;
+  border-bottom-right-radius: 1.8rem;
+  background-image: colors_bg.$categories-footer;
+  @include layout_shadows.flex($direction: column, $gap: 2rem);
+  &__title {
+    @include layout_shadows.text-neo(0.2rem, #043b2c85);
+  }
+  &__circle {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    @include layout_shadows.shadow-neo(0.3rem, #086c7e85, 3%, inset);
+    @include layout_shadows.flex($direction: column);
+    color: #1c8c86;
+  }
+  &__count {
+    font-size: 3em;
+  }
+  &__name {
+    font-size: 1.5em;
+  }
+  &__listTitle {
+    margin-bottom: 2rem;
+  }
+  &__item {
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 1.25rem;
+    font-size: 1.25em;
+    letter-spacing: 0.04em;
+    color: #1c8c86;
+    font-weight: 600;
+    transition: color 0.2s ease-out;
+    &:hover {
+      color: #023432;
+      transition: color 0.2s ease-in;
+    }
+  }
+  &__ilustration {
+    width: 25%;
+    position: absolute;
+    left: 5rem;
+    bottom: 6rem;
+  }
+}
