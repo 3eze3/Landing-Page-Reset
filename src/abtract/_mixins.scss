@@ -6,10 +6,10 @@
   gap: $gap;
 }
 
-@mixin shadow-neo($eje, $color, $porcent) {
+@mixin shadow-neo($eje, $color, $porcent, $mode: normal) {
   $color_ligth: mix($color, #fff, $porcent);
-  box-shadow: $eje $eje ($eje * 2) $color,
-    (-$eje) (-$eje) ($eje * 2) $color_ligth;
+  box-shadow: $eje $eje ($eje * 2) $color $mode,
+    (-$eje) (-$eje) ($eje * 2) $color_ligth $mode;
 }
 
 @mixin text-neo($eje, $color) {
