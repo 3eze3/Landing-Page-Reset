@@ -23,13 +23,12 @@
   }
   &__introduction {
     width: 100%;
-    min-height: 40rem;
+    min-height: 40.67rem;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include layout_shadows.flex();
   }
   &__video {
+    height: 100%;
     aspect-ratio: 16/6.75;
     position: absolute;
     top: 0;
