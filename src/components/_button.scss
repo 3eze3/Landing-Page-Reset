@@ -1,0 +1,15 @@
+.button {
+  padding: 0.75rem 2rem;
+  background: rgba(39, 206, 153, 0.357);
+  font-weight: 900;
+  border-radius: 0.75rem;
+  // Editar y eliminar
+  &--settings {
+    padding: 0.75rem;
+    background-color: transparent;
+    &:hover {
+      color: rgb(255, 253, 253);
+      background-color: transparent;
+    }
+  }
+}
