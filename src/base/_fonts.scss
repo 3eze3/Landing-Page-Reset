@@ -35,10 +35,12 @@ h3 {
 
 h1 {
   color: colors_size.$soft-dark;
+  letter-spacing: 0.05em;
 }
 
 h2 {
   color: colors_size.$soft-teal;
+  letter-spacing: 0.03em;
 }
 
 h3 {
@@ -55,6 +57,8 @@ a {
 p {
   font-size: colors_size.$md;
   color: colors_size.$soft-blue;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 button {
