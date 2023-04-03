@@ -7,12 +7,7 @@
     margin-bottom: 1rem;
   }
   &__label {
-    //
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    gap: 1rem;
-    //
+    @include layout_shadows.flex(flex-start, space-evenly);
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
   }
@@ -52,12 +47,7 @@
   }
   &__wrapperList {
     min-height: 3rem;
-    //
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-    //
+    @include layout_shadows.flex($justify: flex-start);
     margin-bottom: 1rem;
   }
   &__btn {
@@ -72,11 +62,6 @@
   }
   &__wrapper {
     margin-top: 2rem;
-    //
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10rem;
-    //
+    @include layout_shadows.flex($gap: 10rem);
   }
 }
