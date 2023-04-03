@@ -58,64 +58,65 @@
           <span class="addRecipes__recipe">Add your recipes</span>
           <button class="addRecipes__display" tabindex="1">>></button>
         </div>
-        <!-- Formulario -->
         <form action="#" class="addRecipes__register register">
-          <!-- ------------------------------------------1 -->
-          <fieldset class="register__introduccion">
+          <fieldset class="register__introduction">
             <legend class="hidden">Name and description of the recipe</legend>
-            <label class="register__title">
+            <label class="register__label">
               Title recipe:
               <input
-                class="reister__input"
+                class="register__input"
                 name="recipe_name"
                 type="text"
                 placeholder="Write recipes name" />
             </label>
-            <label class="register__description">
+            <label class="register__label">
               Description:
               <textarea
-                class="register__inputArea"
+                class="register__input register__input--area"
                 name="recipe_description"
                 placeholder="Your description..."></textarea>
             </label>
           </fieldset>
-          <!-- ------------------------------------------2 -->
           <fieldset class="register__recipe">
-            <legend class="register__nameList">Ingredientes</legend>
-            <button class="register__more">+</button>
-            <!-- Listas  ingredientes -->
+            <div class="register__wrapperList">
+              <legend class="register__nameList">Ingredientes</legend>
+              <button class="register__btn">
+                <span class="register__add">+</span>
+              </button>
+            </div>
             <ol class="register__list">
-              <!-- ingredient -->
               <li class="register__item">
-                <label class="register__recipeCount">
+                <label class="register__label">
                   1.
                   <input
                     class="register__input register__input--recipe"
                     type="text"
                     placeholder="Ingrediente 1" />
-                  <span>X</span>
+                  <button class="register__btn">X</button>
                 </label>
               </li>
             </ol>
           </fieldset>
-          <!-- ------------------------------------------3 -->
           <fieldset class="register__recipe">
-            <legend class="register__nameList">Paso a segir</legend>
-            <button class="register__more">+</button>
+            <div class="register__wrapperList">
+              <legend class="register__nameList">Pasos</legend>
+              <button class="register__btn">
+                <span class="register__add">+</span>
+              </button>
+            </div>
             <ol class="register__list">
               <li class="register__item">
-                <label class="register__recipeCount">
+                <label class="register__label">
                   1.
                   <input
                     class="register__input register__input--recipe"
                     type="text"
                     placeholder="Paso 1" />
-                  <span>X</span>
+                  <button class="register__btn">X</button>
                 </label>
               </li>
             </ol>
           </fieldset>
-          <!-- ------------------------------------------4 -->
           <div class="register__wrapper">
             <button class="register__save button">Guardar</button>
             <button class="register__cancel button">Cancelar</button>
@@ -124,24 +125,28 @@
       </section>
       <!-- Resetas GENERADAS DINAMICAMENTES  -->
     </main>
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!-- Footer -->
-    <!-- <footer class="">
-      <nav class="">
-        <ul class="">
-          <li class=""><a class="" href="">Github</a></li>
-          <li class=""><a class="" href="">Linkedin</a></li>
-          <li class=""><a class="" href="">Frontend Mentor</a></li>
+    <footer class="footer">
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" target="_blank" href="#">Github</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" target="_blank" href="#">Linkedin</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" target="_blank" href="#">Frontend Mentor</a>
+          </li>
           <li>
-            <a href="https://storyset.com/people"
+            <a
+              class="footer__link--active"
+              target="_blank"
+              href="https://storyset.com/people"
               >People illustrations by Storyset</a
             >
           </li>
         </ul>
       </nav>
-    </footer> -->
+    </footer>
   </body>
 </html>
