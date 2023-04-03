@@ -17,6 +17,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: colors_size.$body;
+  overflow-x: hidden;
+  padding-bottom: 55rem;
 }
 h1,
 h2,
@@ -50,7 +52,8 @@ h3 {
 p,
 span,
 button,
-a {
+a,
+li {
   font-family: second;
 }
 
