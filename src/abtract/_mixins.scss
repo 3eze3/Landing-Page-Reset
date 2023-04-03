@@ -1,4 +1,4 @@
-@mixin flex($aling, $justify, $direction: row, $gap) {
+@mixin flex($aling: center, $justify: center, $direction: row, $gap: 1rem) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -10,6 +10,10 @@
   $color_ligth: mix($color, #fff, $porcent);
   box-shadow: $eje $eje ($eje * 2) $color,
     (-$eje) (-$eje) ($eje * 2) $color_ligth;
+}
+
+@mixin text-neo($eje, $color) {
+  text-shadow: $eje $eje ($eje * 2) $color;
 }
 
 // @mixin break-media($break-point, $size) {
