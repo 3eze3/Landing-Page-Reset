@@ -1,0 +1,48 @@
+@use "../abtract/mixins" as layout_shadows;
+@use "../abtract/varibles" as colors_bg;
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  &__nav {
+    padding-block: 2rem;
+    @include layout_shadows.flex($direction: column);
+    background-color: colors_bg.$nav;
+    border-bottom: solid rgba(0, 0, 0, 0.325) 2px;
+  }
+  &__logo {
+    max-width: 6rem;
+  }
+  &__title {
+    text-shadow: 0.1rem 0.1rem 0.2rem;
+    @include layout_shadows.text-neo(0.1rem, #00000085);
+    &--introduction {
+      @include layout_shadows.text-neo(0.1rem, #efeaeafe);
+      margin-bottom: 1.15rem;
+      text-align: center;
+    }
+  }
+  &__introduction {
+    width: 100%;
+    min-height: 40rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__video {
+    aspect-ratio: 16/6.75;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: hue-rotate(30deg);
+  }
+  &__wrapper {
+    max-width: 50rem;
+    margin-inline: auto;
+    position: absolute;
+  }
+  &__description {
+    text-align: center;
+    font-size: 1.5em;
+  }
+}
