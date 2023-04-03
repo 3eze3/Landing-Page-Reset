@@ -68,6 +68,13 @@ button {
   font-size: colors_size.$sm;
   color: colors_size.$cyan;
   background-color: #fff;
+  cursor: pointer;
+  transition: color 0.25s ease-in-out, background-color 0.2s ease-in;
+  &:hover {
+    background-color: mix(#fff, #0a4e32, 17%);
+    color: #fff;
+    transition: 0.25s ease;
+  }
 }
 a {
   color: colors_size.$gray-cyan;
