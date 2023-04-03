@@ -1,11 +1,11 @@
 @use "base/reset_tags";
 @use "base/fonts";
+// ---------  layouts ---------
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";
 // ---------   Components ---------
 @use "components/menu";
 @use "components/categories";
 @use "components/button";
 @use "components/advertencia";
-// ---------  layouts ---------
-@use "layout/header";
-@use "layout/main";
-@use "layout/footer";
