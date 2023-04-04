@@ -9,6 +9,7 @@ Este proyecto es un desafío propuesto por el Bootcamp AcademiaX, con el objetiv
 <!-- Images izquierda dise;o -->
 <br>
 El propósito de este proyecto es reforzar mis conocimientos en HTML, CSS y JavaScript principalmente, y servir como referencia o inspiración para aquellos que deseen tomar ciertos componentes o crear algo mejor.
+  color: inherit;
 <br>
 Tecnologia Usadas:
 -Html 
