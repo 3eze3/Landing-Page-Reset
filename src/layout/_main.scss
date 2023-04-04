@@ -11,6 +11,17 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   gap: 2rem;
+  &__menu {
+    width: 50rem;
+    min-height: 40rem;
+    padding: 2rem;
+    position: absolute;
+    @include layout_bxsha.shadow-neo(0.4rem, #06212522, 98%, inset);
+    background-color: bg_colors.$agregar-resetas;
+    border-radius: 1rem;
+    left: 0;
+    transition: left 0.25s ease-in;
+  }
   &__cards {
     min-height: 40rem;
   }
