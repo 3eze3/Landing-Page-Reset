@@ -27,10 +27,12 @@
     font-size: 2em;
     font-weight: 900;
     border-radius: 50%;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
     &--active {
       transform: rotate(180deg);
       padding-bottom: 0.2rem;
-      transition: 0.25s ease-out 0.63s;
+      transition: 0.5s ease-out 0.63s;
     }
   }
   &__recipe {

@@ -32,7 +32,6 @@
         </div>
       </section>
     </header>
-    <!--  -->
     <section class="categories">
       <h2 class="categories__title">Summary of recipes</h2>
       <div class="categories__circle">
@@ -52,12 +51,13 @@
         alt
         aria-hidden="true" />
     </section>
-    <!--  -->
     <main class="recipes">
-      <section class="addRecipes">
+      <section class="recipes__menu addRecipes">
         <h2 class="hidden">Form add your recipes</h2>
         <div class="addRecipes__flag">
-          <span class="addRecipes__recipe">Add your recipes</span>
+          <span class="addRecipes__recipe addRecipes__recipe--none"
+            >Add your recipes</span
+          >
           <button class="addRecipes__display" tabindex="1">>></button>
         </div>
         <form action="#" class="addRecipes__register register">
@@ -82,42 +82,58 @@
           <fieldset class="register__recipe">
             <div class="register__wrapperList">
               <legend class="register__nameList">Ingredientes</legend>
-              <button class="register__btn">
+              <!--  -->
+              <button class="register__btn register__btn--add">
                 <span class="register__add">+</span>
               </button>
             </div>
-            <ol class="register__list">
-              <li class="register__item">
-                <label class="register__label">
-                  1.
-                  <input
-                    class="register__input register__input--recipe"
-                    type="text"
-                    placeholder="Ingrediente 1" />
-                  <button class="register__btn">X</button>
-                </label>
-              </li>
-            </ol>
+            <ol class="register__list"></ol>
           </fieldset>
           <fieldset class="register__recipe">
             <div class="register__wrapperList">
               <legend class="register__nameList">Pasos</legend>
-              <button class="register__btn">
+              <button class="register__btn register__btn--add">
                 <span class="register__add">+</span>
               </button>
             </div>
-            <ol class="register__list">
-              <li class="register__item">
-                <label class="register__label">
-                  1.
-                  <input
-                    class="register__input register__input--recipe"
-                    type="text"
-                    placeholder="Paso 1" />
-                  <button class="register__btn">X</button>
-                </label>
-              </li>
-            </ol>
+            <ol class="register__list"></ol>
+          </fieldset>
+          <fieldset class="register__categories">
+            <legend class="register__nameCategories">Categories</legend>
+            <input
+              class="register__inputCategories"
+              type="radio"
+              name="categories"
+              value="Main"
+              id="tags1" />
+            <label
+              class="register__label register__label--categories"
+              for="tags1">
+              Main Courses
+            </label>
+            <input
+              class="register__inputCategories"
+              type="radio"
+              name="categories"
+              value="Dessers"
+              id="tags2" />
+            <label
+              class="register__label register__label--categories"
+              for="tags2">
+              Dessers
+            </label>
+            <input
+              class="register__inputCategories"
+              type="radio"
+              name="categories"
+              value="Others"
+              id="tags3" />
+            <label
+              class="register__label register__label--categories"
+              for="tags3">
+              Others
+            </label>
+            <div class="register__tags"></div>
           </fieldset>
           <div class="register__wrapper">
             <button class="register__save button">Guardar</button>
