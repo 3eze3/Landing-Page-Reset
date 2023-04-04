@@ -1,28 +1,24 @@
 @use "../abtract/mixins" as layout_shadows;
 @use "../abtract/varibles" as bg_colors;
 .addRecipes {
-  width: 50rem;
-  min-height: 40rem;
-  padding: 2rem;
-  position: absolute;
-  @include layout_shadows.shadow-neo(0.4rem, #06212522, 98%, inset);
-  background-color: bg_colors.$agregar-resetas;
-  border-radius: 1rem;
-  transition: left 0.25s ease-in;
   &__close {
-    left: -26.99rem;
+    left: -50rem;
     transition: left 0.25s ease-in;
   }
   &__flag {
-    width: 18rem;
+    width: 6rem;
     padding-block: 0.5rem;
     padding-inline: 0.5rem;
     border-radius: 0.5rem;
     box-shadow: 0.5rem -0.5rem 1rem #2c7d7d6c;
     @include layout_shadows.flex($justify: flex-start);
     position: absolute;
-    right: -18rem;
+    right: -6rem;
     top: calc(50% - 2.25rem);
+    &--active {
+      width: 18rem;
+      right: -18rem;
+    }
   }
   &__display {
     width: 4rem;
@@ -42,5 +38,10 @@
     font-weight: 900;
     letter-spacing: 0.02em;
     white-space: nowrap;
+    &--none {
+      visibility: hidden;
+      position: absolute;
+      transition: position 5s ease-in;
+    }
   }
 }
