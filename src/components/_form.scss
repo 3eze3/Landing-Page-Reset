@@ -10,6 +10,9 @@
     @include layout_shadows.flex(flex-start, space-evenly);
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
+    &--categories {
+      align-items: center;
+    }
   }
   &__input {
     flex: 60%;
@@ -63,5 +66,12 @@
   &__wrapper {
     margin-top: 2rem;
     @include layout_shadows.flex($gap: 10rem);
+  }
+  &__categories {
+    width: 100%;
+    @include layout_shadows.flex($justify: space-evenly);
+  }
+  &__nameCategories {
+    margin-block: 1.5rem;
   }
 }
