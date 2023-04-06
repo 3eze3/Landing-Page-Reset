@@ -21,6 +21,10 @@
     border-radius: 1rem;
     left: 0;
     transition: left 0.25s ease-in;
+    &--close {
+      left: -50rem;
+      transition: left 0.25s ease-in;
+    }
   }
   &__cards {
     min-height: 40rem;
