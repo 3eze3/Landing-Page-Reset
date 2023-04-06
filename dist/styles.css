@@ -238,6 +238,10 @@ legend {
   left: 0;
   transition: left 0.25s ease-in;
 }
+.recipes__menu--close {
+  left: -50rem;
+  transition: left 0.25s ease-in;
+}
 .recipes__cards {
   min-height: 40rem;
 }
@@ -322,12 +326,8 @@ legend {
   cursor: pointer;
 }
 
-.addRecipes__close {
-  left: -50rem;
-  transition: left 0.25s ease-in;
-}
 .addRecipes__flag {
-  width: 6rem;
+  width: 8rem;
   padding-block: 0.5rem;
   padding-inline: 0.5rem;
   border-radius: 0.5rem;
@@ -338,12 +338,14 @@ legend {
   align-items: center;
   gap: 1rem;
   position: absolute;
-  right: -6rem;
+  right: -8rem;
   top: calc(50% - 2.25rem);
+  transition: width 0.5s ease-in 0.25s, right 0.5s ease-in 0.25s;
 }
 .addRecipes__flag--active {
   width: 18rem;
   right: -18rem;
+  transition: 0.5s ease-in 0.25s;
 }
 .addRecipes__display {
   width: 4rem;
@@ -353,23 +355,26 @@ legend {
   font-weight: 900;
   border-radius: 50%;
   transform: rotate(0deg);
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease 0.28s;
 }
 .addRecipes__display--active {
   transform: rotate(180deg);
   padding-bottom: 0.2rem;
-  transition: 0.5s ease-out 0.63s;
+  transition: transform 0.4s ease-out 0.35s;
 }
 .addRecipes__recipe {
+  width: 100%;
   font-size: 1.5em;
   font-weight: 900;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.25s ease-in 0.35s, width 0.75s ease;
 }
 .addRecipes__recipe--none {
-  visibility: hidden;
-  position: absolute;
-  transition: position 5s ease-in;
+  width: 1px;
+  opacity: 0;
+  transition: opacity 0.15s ease-in 0.15s, width 0.75s ease;
 }
 
 .categories {
@@ -537,8 +542,8 @@ legend {
   border-radius: 1rem;
   left: 1rem;
   bottom: 1.5rem;
-  background-image: linear-gradient(to left, purple, rgba(0, 0, 0, 0.2666666667), #cdd, #099785);
-  background-size: 300% 100%;
+  background-image: linear-gradient(to left, rgba(63, 118, 169, 0.396), rgba(16, 112, 119, 0.379), rgba(48, 162, 164, 0.479), rgba(119, 172, 165, 0.4039215686));
+  background-size: 500% 100%;
   transition: transform 0.4s ease-in-out, background-size 0.6s ease-out;
 }
 #tags1:checked ~ .register__tags {
