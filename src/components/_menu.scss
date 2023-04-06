@@ -2,14 +2,14 @@
 @use "../abtract/varibles" as bg_colors;
 .addRecipes {
   &__flag {
-    width: 6rem;
+    width: 8rem;
     padding-block: 0.5rem;
     padding-inline: 0.5rem;
     border-radius: 0.5rem;
     box-shadow: 0.5rem -0.5rem 1rem #2c7d7d6c;
     @include layout_shadows.flex($justify: flex-start);
     position: absolute;
-    right: -6rem;
+    right: -8rem;
     top: calc(50% - 2.25rem);
     transition: width 0.5s ease-in 0.25s, right 0.5s ease-in 0.25s;
     &--active {
