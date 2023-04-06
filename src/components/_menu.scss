@@ -1,10 +1,6 @@
 @use "../abtract/mixins" as layout_shadows;
 @use "../abtract/varibles" as bg_colors;
 .addRecipes {
-  &__close {
-    left: -50rem;
-    transition: left 0.25s ease-in;
-  }
   &__flag {
     width: 6rem;
     padding-block: 0.5rem;
@@ -15,9 +11,11 @@
     position: absolute;
     right: -6rem;
     top: calc(50% - 2.25rem);
+    transition: width 0.5s ease-in 0.25s, right 0.5s ease-in 0.25s;
     &--active {
       width: 18rem;
       right: -18rem;
+      transition: 0.5s ease-in 0.25s;
     }
   }
   &__display {
@@ -28,22 +26,25 @@
     font-weight: 900;
     border-radius: 50%;
     transform: rotate(0deg);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease 0.28s;
     &--active {
       transform: rotate(180deg);
       padding-bottom: 0.2rem;
-      transition: 0.5s ease-out 0.63s;
+      transition: transform 0.4s ease-out 0.35s;
     }
   }
   &__recipe {
+    width: 100%;
     font-size: 1.5em;
     font-weight: 900;
     letter-spacing: 0.02em;
     white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.25s ease-in 0.35s, width 0.75s ease;
     &--none {
-      visibility: hidden;
-      position: absolute;
-      transition: position 5s ease-in;
+      width: 1px;
+      opacity: 0;
+      transition: opacity 0.15s ease-in 0.15s, width 0.75s ease;
     }
   }
 }
