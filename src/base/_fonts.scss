@@ -1,4 +1,5 @@
 @use "../abtract/varibles" as colors_size;
+@use "../abtract/mixins" as layout;
 @font-face {
   font-family: primary;
   src: url(../assets/font_family_ubuntu/Ubuntu-Bold.ttf);
@@ -86,4 +87,29 @@ a {
 label,
 legend {
   font-size: 1.25rem;
+}
+@include layout.break-media(max-width, 480px) {
+  h1,
+  h2 {
+    font-size: colors_size.$lg-mb;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: colors_size.$rg-mb;
+  }
+  p {
+    font-size: colors_size.$md-mb;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  button {
+    font-size: colors_size.$sm-mb;
+  }
+
+  label,
+  legend {
+    font-size: 1.1rem;
+  }
 }
