@@ -53,5 +53,10 @@
     position: absolute;
     left: 5rem;
     bottom: 6rem;
+    @include layout_shadows.break-media(max-width, 480px) {
+      width: 30%;
+      bottom: 2rem;
+      left: 1rem;
+    }
   }
 }
