@@ -8,9 +8,16 @@
     @include layout_shadows.flex($direction: column);
     background-color: colors_bg.$nav;
     border-bottom: solid rgba(0, 0, 0, 0.325) 2px;
+    @include layout_shadows.break-media(max-width, 480px) {
+      @include layout_shadows.flex();
+      padding-inline: 1rem;
+    }
   }
   &__logo {
     max-width: 6rem;
+    @include layout_shadows.break-media(max-width, 480px) {
+      max-width: 2.5rem;
+    }
   }
   &__title {
     text-shadow: 0.1rem 0.1rem 0.2rem;
@@ -19,6 +26,7 @@
       @include layout_shadows.text-neo(0.1rem, #efeaeafe);
       margin-bottom: 1.15rem;
       text-align: center;
+      hyphens: none;
     }
   }
   &__introduction {
@@ -39,9 +47,15 @@
     max-width: 50rem;
     margin-inline: auto;
     position: absolute;
+    @include layout_shadows.break-media(max-width, 480px) {
+      max-width: 25rem;
+    }
   }
   &__description {
     text-align: center;
     font-size: 1.5em;
+    @include layout_shadows.break-media(max-width, 480px) {
+      font-size: 1em;
+    }
   }
 }
