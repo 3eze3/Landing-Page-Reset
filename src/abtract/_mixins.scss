@@ -16,8 +16,8 @@
   text-shadow: $eje $eje ($eje * 2) $color;
 }
 
-// @mixin break-media($break-point, $size) {
-// @media screen and ($break-point: $size) {
-// @content;
-// }
-// }
+@mixin break-media($break-point, $size) {
+  @media screen and ($break-point: $size) {
+    @content;
+  }
+}
