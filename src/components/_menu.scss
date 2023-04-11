@@ -17,6 +17,9 @@
       right: -18rem;
       transition: 0.5s ease-in 0.25s;
     }
+    @include layout_shadows.break-media(max-width, 480px) {
+      display: none;
+    }
   }
   &__display {
     width: 4rem;
