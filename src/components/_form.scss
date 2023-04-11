@@ -73,6 +73,9 @@
   &__wrapper {
     margin-top: 2rem;
     @include layout_shadows.flex($gap: 10rem);
+    @include layout_shadows.break-media(max-width, 480px) {
+      @include layout_shadows.flex($gap: 5rem);
+    }
   }
   &__categories {
     width: 100%;
@@ -105,6 +108,9 @@
   @for $i from 1 through $tags-number {
     #tags#{$i}:checked ~ &__tags {
       transform: translateX(#{($i - 1) * 110%});
+      @include layout_shadows.break-media(max-width, 480px) {
+        transform: translateX(#{($i - 1) * 128.5%});
+      }
       background-size: (100% + ($i - 1) * 100%) 100%;
     }
   }
