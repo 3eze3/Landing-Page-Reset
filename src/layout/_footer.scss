@@ -3,6 +3,10 @@
 .footer {
   height: 5rem;
   background-image: bg_colors.$categories-footer;
+  @include layout_bxsha.break-media(max-width, 480px) {
+    height: 100%;
+    padding-block: 1rem;
+  }
   &__nav {
     height: 100%;
   }
@@ -10,10 +14,16 @@
   &__list {
     height: 100%;
     @include layout_bxsha.flex($gap: 3rem);
+    @include layout_bxsha.break-media(max-width, 480px) {
+      @include layout_bxsha.flex($gap: 2rem, $direction: column);
+    }
   }
 
   &__link {
     font-size: 1.5em;
+    @include layout_bxsha.break-media(max-width, 480px) {
+      font-size: 1em;
+    }
     &--active {
       color: rgb(12, 43, 33);
       font-size: 1.14em;
