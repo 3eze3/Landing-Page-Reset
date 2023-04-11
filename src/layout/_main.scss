@@ -11,19 +11,25 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   gap: 2rem;
+  @include layout_bxsha.break-media(max-width, 480px) {
+    padding: 47rem 1rem;
+  }
   &__menu {
     width: 50rem;
     min-height: 40rem;
     padding: 2rem;
     position: absolute;
-    @include layout_bxsha.shadow-neo(0.4rem, #06212522, 98%, inset);
-    background-color: bg_colors.$agregar-resetas;
-    border-radius: 1rem;
     left: 0;
+    @include layout_bxsha.shadow-neo(0.4rem, #06212522, 98%, inset);
+    border-radius: 1rem;
+    background-color: bg_colors.$agregar-resetas;
     transition: left 0.25s ease-in;
     &--close {
       left: -50rem;
       transition: left 0.25s ease-in;
+    }
+    @include layout_bxsha.break-media(max-width, 480px) {
+      width: 100%;
     }
   }
   &__cards {
