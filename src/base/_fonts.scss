@@ -57,6 +57,7 @@ button,
 a,
 li {
   font-family: second;
+  hyphens: auto;
 }
 
 p {
@@ -88,6 +89,7 @@ label,
 legend {
   font-size: 1.25rem;
 }
+
 @include layout.break-media(max-width, 480px) {
   h1,
   h2 {
