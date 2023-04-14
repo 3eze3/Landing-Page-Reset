@@ -2,17 +2,18 @@
 @use "../abtract/varibles" as bg_colors;
 .recipes {
   width: 100%;
-  min-height: 200vh;
+  min-height: 150vh;
   padding: 1rem;
   position: relative;
   border-top-left-radius: 1.8rem;
   border-top-right-radius: 1.8rem;
   background-color: bg_colors.$main;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  gap: 5rem;
   @include layout_bxsha.break-media(max-width, 480px) {
-    padding: 47rem 1rem;
+    padding: 47rem 0.5rem;
+    height: 100%;
   }
   &__menu {
     width: 50rem;
@@ -34,5 +35,34 @@
   }
   &__cards {
     min-height: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.2rem;
+    background-color: rgba(255, 0, 0, 0.245);
+    border-radius: 1.25rem;
+  }
+  &__wrapper {
+    width: 90%;
+    margin-inline: auto;
+  }
+  &__title {
+    margin-bottom: 1rem;
+  }
+  &__description {
+    padding-inline: 0.75rem;
+    text-align: center;
+    line-height: 1.65;
+    color: rgb(39, 146, 125);
+    hyphens: manual;
+  }
+  &__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
   }
 }
