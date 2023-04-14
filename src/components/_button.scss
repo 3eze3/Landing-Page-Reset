@@ -11,5 +11,17 @@
       color: rgb(255, 253, 253);
       background-color: transparent;
     }
+    &::after {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 0.0625rem;
+      background-color: rgba(13, 137, 122, 0.998);
+      transition: width 0.25s ease-in-out;
+    }
+    &:hover::after {
+      width: 100%;
+      transition: width 0.25s ease-in-out;
+    }
   }
 }
