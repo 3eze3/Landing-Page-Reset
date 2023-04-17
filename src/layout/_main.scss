@@ -2,7 +2,7 @@
 @use "../abtract/varibles" as bg_colors;
 .recipes {
   width: 100%;
-  min-height: 150vh;
+  min-height: 120vh;
   padding: 1rem;
   position: relative;
   border-top-left-radius: 1.8rem;
@@ -12,8 +12,9 @@
   grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
   gap: 5rem;
   @include layout_bxsha.break-media(max-width, 480px) {
-    padding: 47rem 0.5rem;
-    height: 100%;
+    padding-top: 47rem;
+    padding-inline: 0.5rem;
+    min-height: 100%;
   }
   &__menu {
     width: 50rem;
@@ -34,7 +35,7 @@
     }
   }
   &__cards {
-    height: 50rem;
+    min-height: 50rem;
     @include layout_bxsha.flex(flex-start, space-between, column);
     padding: 1.2rem;
     @include layout_bxsha.shadow-neo(0.2rem, #086c7e85, 20%, inset);
@@ -56,20 +57,24 @@
     }
   }
   &__wrapper {
-    width: 90%;
-    margin-inline: auto;
+    @include layout_bxsha.break-media(max-width, 480px) {
+      width: 90%;
+      margin-inline: auto;
+    }
   }
   &__title {
     margin-bottom: 1rem;
     text-align: center;
   }
   &__description {
-    padding-inline: 0.5rem;
-    text-align: center;
     line-height: 1.65;
     color: rgb(39, 146, 125);
     hyphens: manual;
     font-weight: 600;
+    @include layout_bxsha.break-media(max-width, 480px) {
+      text-align: center;
+      padding-inline: 0.5rem;
+    }
   }
   &__buttons {
     width: 100%;
