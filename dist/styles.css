@@ -127,6 +127,7 @@ button,
 a,
 li {
   font-family: second;
+  hyphens: auto;
 }
 
 p {
@@ -161,6 +162,28 @@ legend {
   font-size: 1.25rem;
 }
 
+@media screen and (max-width: 480px) {
+  h1,
+  h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  p {
+    font-size: 1em;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+  button {
+    font-size: 0.9em;
+  }
+  label,
+  legend {
+    font-size: 1.1rem;
+  }
+}
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -175,8 +198,23 @@ legend {
   background-color: rgba(62, 150, 135, 0.1607843137);
   border-bottom: solid rgba(0, 0, 0, 0.325) 2px;
 }
+@media screen and (max-width: 480px) {
+  .hero__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-inline: 1rem;
+  }
+}
 .hero__logo {
   max-width: 6rem;
+}
+@media screen and (max-width: 480px) {
+  .hero__logo {
+    max-width: 2.5rem;
+  }
 }
 .hero__title {
   text-shadow: 0.1rem 0.1rem 0.2rem;
@@ -186,6 +224,7 @@ legend {
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(239, 234, 234, 0.9960784314);
   margin-bottom: 1.15rem;
   text-align: center;
+  hyphens: none;
 }
 .hero__introduction {
   width: 100%;
@@ -210,45 +249,133 @@ legend {
   margin-inline: auto;
   position: absolute;
 }
+@media screen and (max-width: 480px) {
+  .hero__wrapper {
+    max-width: 25rem;
+  }
+}
 .hero__description {
   text-align: center;
   font-size: 1.5em;
 }
+@media screen and (max-width: 480px) {
+  .hero__description {
+    font-size: 1em;
+  }
+}
 
 .recipes {
   width: 100%;
-  min-height: 200vh;
+  min-height: 120vh;
   padding: 1rem;
   position: relative;
   border-top-left-radius: 1.8rem;
   border-top-right-radius: 1.8rem;
   background-color: rgba(64, 206, 206, 0.4235294118);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  gap: 5rem;
+}
+@media screen and (max-width: 480px) {
+  .recipes {
+    padding-top: 47rem;
+    padding-inline: 0.5rem;
+    min-height: 100%;
+  }
 }
 .recipes__menu {
   width: 50rem;
   min-height: 40rem;
   padding: 2rem;
   position: absolute;
-  box-shadow: 0.4rem 0.4rem 0.8rem rgba(6, 33, 37, 0.1333333333) inset, -0.4rem -0.4rem 0.8rem rgba(61, 82, 85, 0.1506666667) inset;
-  background-color: #67d5d5;
-  border-radius: 1rem;
   left: 0;
+  box-shadow: 0.4rem 0.4rem 0.8rem rgba(6, 33, 37, 0.1333333333) inset, -0.4rem -0.4rem 0.8rem rgba(61, 82, 85, 0.1506666667) inset;
+  border-radius: 1rem;
+  background-color: #67d5d5;
   transition: left 0.25s ease-in;
 }
 .recipes__menu--close {
   left: -50rem;
   transition: left 0.25s ease-in;
 }
+@media screen and (max-width: 480px) {
+  .recipes__menu {
+    width: 100%;
+  }
+}
 .recipes__cards {
-  min-height: 40rem;
+  min-height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(8, 108, 126, 0.5215686275) inset, -0.2rem -0.2rem 0.4rem rgba(235, 243, 245, 0.9043137255) inset;
+  border-radius: 1.25rem;
+}
+@media screen and (max-width: 480px) {
+  .recipes__cards {
+    min-height: 40rem;
+  }
+}
+.recipes__item {
+  margin-bottom: 1rem;
+  font-size: 1.2em;
+  color: #1f636f;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.2rem;
+  font-weight: 600;
+}
+.recipes__item::after {
+  content: url("../../assets/images/sushi.svg");
+  display: block;
+  width: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .recipes__wrapper {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+.recipes__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.recipes__description {
+  line-height: 1.65;
+  color: rgb(39, 146, 125);
+  hyphens: manual;
+  font-weight: 600;
+}
+@media screen and (max-width: 480px) {
+  .recipes__description {
+    text-align: center;
+    padding-inline: 0.5rem;
+  }
+}
+.recipes__buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .footer {
   height: 5rem;
   background-image: linear-gradient(90deg, rgba(223, 222, 222, 0.6823529412), rgba(7, 40, 31, 0.1529411765), rgba(0, 143, 107, 0.5411764706));
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    height: 100%;
+    padding-block: 1rem;
+  }
 }
 .footer__nav {
   height: 100%;
@@ -261,8 +388,22 @@ legend {
   align-items: center;
   gap: 3rem;
 }
+@media screen and (max-width: 480px) {
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
 .footer__link {
   font-size: 1.5em;
+}
+@media screen and (max-width: 480px) {
+  .footer__link {
+    font-size: 1em;
+  }
 }
 .footer__link--active {
   color: rgb(12, 43, 33);
@@ -293,6 +434,19 @@ legend {
   color: rgb(255, 253, 253);
   background-color: transparent;
 }
+.button--settings::after {
+  content: "";
+  display: block;
+  width: 0%;
+  margin-top: 0.2rem;
+  height: 0.125rem;
+  background-color: rgba(13, 137, 122, 0.998);
+  transition: width 0.25s ease-in-out;
+}
+.button--settings:hover::after {
+  width: 100%;
+  transition: width 0.25s ease-in-out;
+}
 
 .modal {
   display: none;
@@ -305,8 +459,11 @@ legend {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.2);
 }
+.modal__title {
+  margin-block: 0.5rem;
+}
 .modal__content {
-  width: 50%;
+  width: 70%;
   border: 0.0625rem solid #888;
   padding: 1.25rem;
   margin: 15% auto;
@@ -346,6 +503,11 @@ legend {
   width: 18rem;
   right: -18rem;
   transition: 0.5s ease-in 0.25s;
+}
+@media screen and (max-width: 480px) {
+  .addRecipes__flag {
+    display: none;
+  }
 }
 .addRecipes__display {
   width: 4rem;
@@ -390,7 +552,6 @@ legend {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  transform: translateX(130rem);
 }
 .categories__show {
   transform: translateX(0);
@@ -439,6 +600,13 @@ legend {
   position: absolute;
   left: 5rem;
   bottom: 6rem;
+}
+@media screen and (max-width: 480px) {
+  .categories__ilustration {
+    width: 30%;
+    bottom: 2rem;
+    left: 1rem;
+  }
 }
 
 .register {
@@ -523,6 +691,15 @@ legend {
   align-items: center;
   gap: 10rem;
 }
+@media screen and (max-width: 480px) {
+  .register__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+}
 .register__categories {
   width: 100%;
   display: flex;
@@ -550,17 +727,37 @@ legend {
   transform: translateX(0%);
   background-size: 100% 100%;
 }
+@media screen and (max-width: 480px) {
+  #tags1:checked ~ .register__tags {
+    transform: translateX(0%);
+  }
+}
 #tags2:checked ~ .register__tags {
   transform: translateX(110%);
   background-size: 200% 100%;
+}
+@media screen and (max-width: 480px) {
+  #tags2:checked ~ .register__tags {
+    transform: translateX(128.5%);
+  }
 }
 #tags3:checked ~ .register__tags {
   transform: translateX(220%);
   background-size: 300% 100%;
 }
+@media screen and (max-width: 480px) {
+  #tags3:checked ~ .register__tags {
+    transform: translateX(257%);
+  }
+}
 #tags4:checked ~ .register__tags {
   transform: translateX(330%);
   background-size: 400% 100%;
+}
+@media screen and (max-width: 480px) {
+  #tags4:checked ~ .register__tags {
+    transform: translateX(385.5%);
+  }
 }
 .register__nameCategories {
   margin-block: 1.5rem;
