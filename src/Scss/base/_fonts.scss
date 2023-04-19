@@ -2,11 +2,11 @@
 @use "../abtract/mixins" as layout;
 @font-face {
   font-family: primary;
-  src: url(../assets/font_family_ubuntu/Ubuntu-Bold.ttf);
+  src: url(assets/font_family_ubuntu/Ubuntu-Bold.ttf);
 }
 @font-face {
   font-family: second;
-  src: url(../assets/font_family_ubuntu/Ubuntu-Regular.ttf);
+  src: url(assets/font_family_ubuntu/Ubuntu-Regular.ttf);
 }
 
 body {
