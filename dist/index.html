@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-
     <title>Think your flavors</title>
   </head>
   <body>
@@ -13,13 +12,13 @@
       <nav class="hero__nav">
         <img
           class="hero__logo"
-          src="../assets/images/cupcake-logo.svg"
+          src="assets/images/cupcake-logo.svg"
           alt="Cupcake Logo" />
         <h1 class="hero__title">Think your flavors</h1>
       </nav>
       <section class="hero__introduction">
         <video autoplay muted loop class="hero__video">
-          <source src="../assets/images/cooking_hero_video.mp4" />
+          <source src="assets/images/cooking_hero_video.mp4" />
         </video>
         <div class="hero__wrapper">
           <h2 class="hero__title hero__title--introduction">
@@ -47,7 +46,7 @@
       </ul>
       <img
         class="categories__ilustration"
-        src="../assets/images/breakfast-categories.svg"
+        src="assets/images/breakfast-categories.svg"
         alt
         aria-hidden="true" />
     </section>
@@ -86,7 +85,13 @@
                 <span class="register__add">+</span>
               </button>
             </div>
-            <ol class="register__list"></ol>
+            <ol class="register__list">
+              <li class="register__item">
+                Cangrego<button class="register__btn register__btn--remove">
+                  X
+                </button>
+              </li>
+            </ol>
           </fieldset>
           <fieldset class="register__recipe">
             <div class="register__wrapperList">
@@ -223,5 +228,6 @@
       </nav>
     </footer>
   </body>
-  <script src="../src/app/app.js" defer></script>
+  <!-- <script src="../src/app/show_categories.mjs" defer></script> -->
+  <script src="../src/app/add_recipes_steps.mjs" defer></script>
 </html>
