@@ -51,7 +51,7 @@
     @include layout_bxsha.flex(flex-start, center, row-reverse, 0.2rem);
     font-weight: 600;
     &::after {
-      content: url("../../assets/images/sushi.svg");
+      content: url("assets/images/sushi.svg");
       display: block;
       width: 2rem;
     }
