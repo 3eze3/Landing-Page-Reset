@@ -21,3 +21,29 @@
     @content;
   }
 }
+@mixin moveBackground(
+  $name: move-to,
+  $duration: 3.25s,
+  $timing-function: ease,
+  $iteration-count: infinite,
+  $direction: alternate-reverse
+) {
+  animation: $name $duration $timing-function $iteration-count $direction;
+}
+@keyframes move-to {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 130%;
+  }
+  70% {
+    background-size: 160%;
+  }
+  90% {
+    background-size: 200%;
+  }
+  100% {
+    background-size: 300%;
+  }
+}
