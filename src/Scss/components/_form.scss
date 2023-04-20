@@ -49,16 +49,16 @@
   &__recipe {
     margin-block: 1rem;
   }
-  &__list {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 45%);
-    gap: 1rem;
-  }
   &__wrapperList {
     min-height: 3rem;
     @include layout_shadows.flex($justify: flex-start);
     margin-bottom: 1rem;
+  }
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    gap: 1.2rem;
   }
   &__item {
     border-radius: 2rem;
@@ -73,6 +73,11 @@
     @include layout_shadows.flex($justify: space-between, $gap: 0);
     padding-left: 1rem;
     @include layout_shadows.moveBackground();
+  }
+  &__ingredient {
+    width: 87%;
+    outline: none;
+    padding: 0.2rem;
   }
   &__btn {
     width: 2rem;
