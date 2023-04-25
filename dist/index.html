@@ -66,7 +66,6 @@
               Title:
               <input
                 class="register__input"
-                name="recipe_name"
                 type="text"
                 placeholder="Write recipes name" />
             </label>
@@ -74,60 +73,42 @@
               Description:
               <textarea
                 class="register__input register__input--area"
-                name="recipe_description"
                 placeholder="Your description..."></textarea>
             </label>
           </fieldset>
           <fieldset class="register__recipe">
             <div class="register__wrapperList">
-              <legend class="register__nameList" id="ingredients">
-                Ingredientes
-              </legend>
+              <legend class="register__nameList">Ingredientes</legend>
               <button class="register__btn register__btn--add">
                 <span class="register__add">+</span>
               </button>
             </div>
-            <form action="#" class="register__list"></form>
+            <div role="form" class="register__list"></div>
           </fieldset>
           <fieldset class="register__recipe">
             <div class="register__wrapperList">
-              <legend class="register__nameList" id="steps">Pasos</legend>
+              <legend class="register__nameList">Pasos</legend>
               <button class="register__btn register__btn--add">
                 <span class="register__add">+</span>
               </button>
             </div>
-            <form action="#" class="register__list"></form>
+            <div role="form" class="register__list"></div>
           </fieldset>
           <fieldset class="register__categories">
-            <legend class="register__nameCategories">Categories</legend>
-            <input
-              class="register__inputCategories"
-              type="radio"
-              name="categories"
-              value="Main"
-              id="tags1" />
+            <legend class="register__nameCategories">Categories:</legend>
+            <input class="register__inputCategories" type="radio" id="tags1" />
             <label
               class="register__label register__label--categories"
               for="tags1">
               Main
             </label>
-            <input
-              class="register__inputCategories"
-              type="radio"
-              name="categories"
-              value="Dessers"
-              id="tags2" />
+            <input class="register__inputCategories" type="radio" id="tags2" />
             <label
               class="register__label register__label--categories"
               for="tags2">
               Dessers
             </label>
-            <input
-              class="register__inputCategories"
-              type="radio"
-              name="categories"
-              value="Others"
-              id="tags3" />
+            <input class="register__inputCategories" type="radio" id="tags3" />
             <label
               class="register__label register__label--categories"
               for="tags3">
@@ -136,7 +117,7 @@
             <div class="register__tags"></div>
           </fieldset>
           <div class="register__wrapper">
-            <button class="register__save button">Guardar</button>
+            <button class="register__save button" type="submit">Guardar</button>
             <button class="register__cancel button">Cancelar</button>
           </div>
         </form>
@@ -226,4 +207,5 @@
   </body>
   <!-- <script src="../src/app/show_categories.mjs" defer></script> -->
   <script src="../src/app/add_recipes_steps.mjs" defer></script>
+  <script src="../src/app/form_reload_default.mjs" defer></script>
 </html>
