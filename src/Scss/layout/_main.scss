@@ -2,7 +2,7 @@
 @use "../abtract/varibles" as bg_colors;
 .recipes {
   width: 100%;
-  min-height: 120vh;
+  min-height: 200vh;
   padding: 1rem;
   position: relative;
   border-top-left-radius: 1.8rem;
@@ -35,7 +35,7 @@
     }
   }
   &__cards {
-    min-height: 50rem;
+    height: 50rem;
     @include layout_bxsha.flex(flex-start, space-between, column);
     padding: 1.2rem;
     @include layout_bxsha.shadow-neo(0.2rem, #086c7e85, 20%, inset);
