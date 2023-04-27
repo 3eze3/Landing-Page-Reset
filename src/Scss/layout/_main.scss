@@ -21,13 +21,13 @@
     min-height: 40rem;
     padding: 2rem;
     position: absolute;
-    left: 0;
+    left: -50rem;
     @include layout_bxsha.shadow-neo(0.4rem, #06212522, 98%, inset);
     border-radius: 1rem;
     background-color: bg_colors.$agregar-resetas;
     transition: left 0.25s ease-in;
-    &--close {
-      left: -50rem;
+    &--active {
+      left: 0;
       transition: left 0.25s ease-in;
     }
     @include layout_bxsha.break-media(max-width, 480px) {
