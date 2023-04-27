@@ -2,23 +2,37 @@
 @use "../abtract/varibles" as bg_colors;
 .addRecipes {
   &__flag {
-    width: 8rem;
+    width: 18rem;
     padding-block: 0.5rem;
     padding-inline: 0.5rem;
     border-radius: 0.5rem;
     box-shadow: 0.5rem -0.5rem 1rem #2c7d7d6c;
     @include layout_shadows.flex($justify: flex-start);
     position: absolute;
-    right: -8rem;
     top: calc(50% - 2.25rem);
+    right: -18rem;
     transition: width 0.5s ease-in 0.25s, right 0.5s ease-in 0.25s;
     &--active {
-      width: 18rem;
-      right: -18rem;
+      width: 7rem;
+      right: -7rem;
       transition: 0.5s ease-in 0.25s;
     }
     @include layout_shadows.break-media(max-width, 480px) {
       display: none;
+    }
+  }
+  &__recipe {
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.25s ease-in 0.35s, width 0.75s ease;
+    &--none {
+      width: 0.5px;
+      opacity: 0;
+      transition: opacity 0.15s ease-in 0.15s, width 0.75s ease;
     }
   }
   &__display {
@@ -34,20 +48,6 @@
       transform: rotate(180deg);
       padding-bottom: 0.2rem;
       transition: transform 0.4s ease-out 0.35s;
-    }
-  }
-  &__recipe {
-    width: 100%;
-    font-size: 1.5em;
-    font-weight: 900;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
-    opacity: 1;
-    transition: opacity 0.25s ease-in 0.35s, width 0.75s ease;
-    &--none {
-      width: 1px;
-      opacity: 0;
-      transition: opacity 0.15s ease-in 0.15s, width 0.75s ease;
     }
   }
 }
