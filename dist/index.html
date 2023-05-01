@@ -64,13 +64,16 @@
               Title:
               <input
                 class="register__input"
+                id="title__input"
                 type="text"
-                placeholder="Write recipes name" />
+                placeholder="Write recipes name"
+                required />
             </label>
             <label class="register__label">
               Description:
               <textarea
                 class="register__input register__input--area"
+                id="description__input"
                 placeholder="Your description..."></textarea>
             </label>
           </fieldset>
@@ -94,19 +97,31 @@
           </fieldset>
           <fieldset class="register__categories">
             <legend class="register__nameCategories">Categories:</legend>
-            <input class="register__inputCategories" type="radio" id="tags1" />
+            <input
+              class="register__inputCategories"
+              type="radio"
+              id="tags1"
+              name="categorie" />
             <label
               class="register__label register__label--categories"
               for="tags1">
               Main
             </label>
-            <input class="register__inputCategories" type="radio" id="tags2" />
+            <input
+              class="register__inputCategories"
+              type="radio"
+              id="tags2"
+              name="categorie" />
             <label
               class="register__label register__label--categories"
               for="tags2">
               Dessers
             </label>
-            <input class="register__inputCategories" type="radio" id="tags3" />
+            <input
+              class="register__inputCategories"
+              type="radio"
+              id="tags3"
+              name="categorie" />
             <label
               class="register__label register__label--categories"
               for="tags3">
@@ -116,7 +131,7 @@
           </fieldset>
           <div class="register__wrapper">
             <button class="register__save button" type="submit">Guardar</button>
-            <button class="register__cancel button">Cancelar</button>
+            <button class="register__cancel button">Clear</button>
           </div>
         </form>
       </section>
@@ -132,52 +147,6 @@
         </div>
       </div>
       <!-- Resetas GENERADAS DINAMICAMENTES  -->
-      <article class="recipes__cards">
-        <div class="recipes__wrapper">
-          <h2 class="recipes__title">Titulo de la reseta</h2>
-          <p class="recipes__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            nobis aperiam, ad reprehenderit accusantium cumque vitae. Assumenda
-            quos, consequatur nostrum earum ad sunt dolorem provident cum
-            doloremque, qui, iste reprehenderit!
-          </p>
-        </div>
-        <ol class="recipes__list recipes__list--ingredients">
-          <li class="recipes__item">Ingrediente 1</li>
-          <li class="recipes__item">Ingrediente 1</li>
-        </ol>
-        <ol class="recipes__list recipes__list--stpes">
-          <li class="recipes__item">Ingrediente 1</li>
-          <li class="recipes__item">Ingrediente 1</li>
-        </ol>
-        <div class="recipes__buttons">
-          <button class="button button--settings">Editar</button>
-          <button class="button button--revome">Eliminar</button>
-        </div>
-      </article>
-      <article class="recipes__cards">
-        <div class="recipes__wrapper">
-          <h2 class="recipes__title">Titulo de la reseta</h2>
-          <p class="recipes__description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            nobis aperiam, ad reprehenderit accusantium cumque vitae. Assumenda
-            quos, consequatur nostrum earum ad sunt dolorem provident cum
-            doloremque, qui, iste reprehenderit!
-          </p>
-        </div>
-        <ol class="recipes__ingredients">
-          <li class="recipes__item">Ingrediente 1</li>
-          <li class="recipes__item">Ingrediente 1</li>
-        </ol>
-        <ol class="recipes__stpes">
-          <li class="recipes__item">Ingrediente 1</li>
-          <li class="recipes__item">Ingrediente 1</li>
-        </ol>
-        <div class="recipes__buttons">
-          <button class="button button--settings">Editar</button>
-          <button class="button button--revome">Eliminar</button>
-        </div>
-      </article>
     </main>
     <footer class="footer">
       <nav class="footer__nav">
@@ -207,4 +176,5 @@
   <script src="../src/app/add_recipes_steps.mjs" defer></script>
   <script src="../src/app/form_reload_default.mjs" defer></script>
   <script src="../src/app/show_form.js"></script>
+  <script src="../src/app/save.js"></script>
 </html>
