@@ -25,10 +25,10 @@
     @include layout_bxsha.shadow-neo(0.4rem, #06212522, 98%, inset);
     border-radius: 1rem;
     background-color: bg_colors.$agregar-resetas;
-    transition: left 0.25s ease-in;
+    transition: left 0.1s linear;
     &--active {
       left: 0;
-      transition: left 0.25s ease-in;
+      transition: left 0.1s linear;
     }
     @include layout_bxsha.break-media(max-width, 480px) {
       width: 100%;
