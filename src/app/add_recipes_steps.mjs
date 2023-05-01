@@ -4,7 +4,7 @@ function addElements() {
   const $itemList = `
   <label class="register__item">
     <input class="register__ingredient" type="text" 
-    placeholder="Enter your recipe..." />
+    placeholder="Enter your recipe..." required/>
     <button class="register__btn register__btn--remove">X</button>
   </label>`;
   $list.insertAdjacentHTML("beforeend", $itemList);
