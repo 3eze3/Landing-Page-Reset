@@ -3,8 +3,8 @@ const $titleInput = document.getElementById("title__input");
 const $descriptionInput = document.getElementById("description__input");
 const [$ingredients, $steps] = document.querySelectorAll(".register__list");
 const $save = document.querySelector(".register__save");
-const $data = localStorage.getItem("data")
-  ? JSON.parse(localStorage.getItem("data"))
+const $data = localStorage.getItem("card")
+  ? JSON.parse(localStorage.getItem("card"))
   : [];
 function createRecipeCard(title, description, ingredients, steps) {
   const $card = `
@@ -43,7 +43,12 @@ function addRecipeCard() {
     label => label.firstElementChild.value
   );
   const $new_card = createRecipeCard(title, descriptin, ingredients, steps);
+  $data.push($new_card);
+  localStorage.setItem("card", JSON.stringify($data));
+  console.log($data);
   $main.insertAdjacentHTML("beforeend", $new_card);
 }
-function saveStorage() {}
+// function saveStorage() {}
+// $data.forEach(card => $main.insertAdjacentHTML("beforeend", card));
+// });
 $save.addEventListener("click", () => addRecipeCard());
