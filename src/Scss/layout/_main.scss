@@ -71,8 +71,10 @@
   &__description {
     line-height: 1.65;
     color: rgb(39, 146, 125);
-    hyphens: manual;
+    hyphens: auto;
     font-weight: 600;
+    text-align: center;
+    margin-top: 2rem;
     @include layout_bxsha.break-media(max-width, 480px) {
       text-align: center;
       padding-inline: 0.5rem;
