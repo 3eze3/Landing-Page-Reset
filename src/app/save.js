@@ -1,54 +1,68 @@
-const $main = document.querySelector(".recipes");
-const $titleInput = document.getElementById("title__input");
-const $descriptionInput = document.getElementById("description__input");
-const [$ingredients, $steps] = document.querySelectorAll(".register__list");
-const $save = document.querySelector(".register__save");
-const $data = localStorage.getItem("card")
-  ? JSON.parse(localStorage.getItem("card"))
-  : [];
-function createRecipeCard(title, description, ingredients, steps) {
-  const $card = `
-      <article class="recipes__cards">
+class RecipeCard {
+  constructor(title, description, ingredients, steps) {
+    this.title = title;
+    this.description = description;
+    this.ingredients = ingredients;
+    this.steps = steps;
+  }
+  createRecipeCard() {
+    const $card = document.createElement("article");
+    $card.className = "recipes__cards";
+    $card.innerHTML = `
         <div class="recipes__wrapper">
-          <h2 class="recipes__title"> ${title}</h2>
+          <h2 class="recipes__title"> ${this.title}</h2>
           <p class="recipes__description">
-            ${description}
+            ${this.description}
           </p>
         </div>
         <ol class="recipes__list recipes__list--ingredients">
-              ${ingredients
+              ${this.ingredients
                 .map(item => `<li class="recipes__item">${item}</li>`)
                 .join("")}
         </ol>
         <ol class="recipes__list recipes__list--stpes">
-              ${steps
+              ${this.steps
                 .map(item => `<li class="recipes__item">${item}</li>`)
                 .join("")}
         </ol>
         <div class="recipes__buttons">
           <button class="button button--settings">Editar</button>
           <button class="button button--revome">Eliminar</button>
-        </div>
-      </article>
-  `;
-  return $card;
+        </div>`;
+    return $card;
+  }
 }
-function addRecipeCard() {
+
+const $main = document.querySelector(".recipes");
+const $titleInput = document.getElementById("title__input");
+const $descriptionInput = document.getElementById("description__input");
+const [$ingredients, $steps] = document.querySelectorAll(".register__list");
+const $save = document.querySelector(".register__save");
+// local storage
+const $data = localStorage.getItem("card")
+  ? JSON.parse(localStorage.getItem("card"))
+  : [];
+
+function saveCard(card) {
+  $data.push(card);
+  localStorage.setItem("card", JSON.stringify($data));
+}
+
+function inserRecipeCard() {
   const title = $titleInput.value;
-  const descriptin = $descriptionInput.value;
+  const description = $descriptionInput.value;
   const ingredients = Array.from($ingredients.children).map(
     label => label.firstElementChild.value
   );
   const steps = Array.from($steps.children).map(
     label => label.firstElementChild.value
   );
-  const $new_card = createRecipeCard(title, descriptin, ingredients, steps);
-  $data.push($new_card);
-  localStorage.setItem("card", JSON.stringify($data));
-  console.log($data);
+  const recipeCard = new RecipeCard(title, description, ingredients, steps);
+  const $new_card = recipeCard.createRecipeCard();
+  saveCard($new_card.outerHTML);
   $main.insertAdjacentHTML("beforeend", $new_card);
 }
-// function saveStorage() {}
+
 // $data.forEach(card => $main.insertAdjacentHTML("beforeend", card));
-// });
-$save.addEventListener("click", () => addRecipeCard());
+
+$save.addEventListener("click", inserRecipeCard);
