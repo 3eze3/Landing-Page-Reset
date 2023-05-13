@@ -27,7 +27,7 @@ class RecipeCard {
         </ol>
         <div class="recipes__buttons">
           <button class="button button--settings">Editar</button>
-          <button class="button button--revome">Eliminar</button>
+          <button class="button button--remove">Eliminar</button>
         </div>`;
     return $card;
   }
@@ -63,6 +63,6 @@ function inserRecipeCard() {
   $main.insertAdjacentHTML("beforeend", $new_card);
 }
 
-// $data.forEach(card => $main.insertAdjacentHTML("beforeend", card));
+$data.forEach(card => $main.insertAdjacentHTML("beforeend", card));
 
-$save.addEventListener("click", inserRecipeCard);
+$save.addEventListener("click", () => inserRecipeCard());
