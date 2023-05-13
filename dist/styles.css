@@ -70,13 +70,30 @@ svg {
   fill: currentColor;
 }
 
+@keyframes move-to {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 130%;
+  }
+  70% {
+    background-size: 160%;
+  }
+  90% {
+    background-size: 200%;
+  }
+  100% {
+    background-size: 300%;
+  }
+}
 @font-face {
   font-family: primary;
-  src: url(../assets/font_family_ubuntu/Ubuntu-Bold.ttf);
+  src: url(assets/font_family_ubuntu/Ubuntu-Bold.ttf);
 }
 @font-face {
   font-family: second;
-  src: url(../assets/font_family_ubuntu/Ubuntu-Regular.ttf);
+  src: url(assets/font_family_ubuntu/Ubuntu-Regular.ttf);
 }
 body {
   width: 100%;
@@ -266,7 +283,7 @@ legend {
 
 .recipes {
   width: 100%;
-  min-height: 120vh;
+  min-height: 200vh;
   padding: 1rem;
   position: relative;
   border-top-left-radius: 1.8rem;
@@ -278,9 +295,9 @@ legend {
 }
 @media screen and (max-width: 480px) {
   .recipes {
-    padding-top: 47rem;
+    padding-top: 45rem;
     padding-inline: 0.5rem;
-    min-height: 100%;
+    height: 100%;
   }
 }
 .recipes__menu {
@@ -288,23 +305,24 @@ legend {
   min-height: 40rem;
   padding: 2rem;
   position: absolute;
-  left: 0;
+  left: -50rem;
   box-shadow: 0.4rem 0.4rem 0.8rem rgba(6, 33, 37, 0.1333333333) inset, -0.4rem -0.4rem 0.8rem rgba(61, 82, 85, 0.1506666667) inset;
   border-radius: 1rem;
   background-color: #67d5d5;
-  transition: left 0.25s ease-in;
+  transition: left 0.1s linear;
 }
-.recipes__menu--close {
-  left: -50rem;
-  transition: left 0.25s ease-in;
+.recipes__menu--active {
+  left: 0;
+  transition: left 0.1s linear;
 }
 @media screen and (max-width: 480px) {
   .recipes__menu {
     width: 100%;
+    left: 0;
   }
 }
 .recipes__cards {
-  min-height: 50rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -324,14 +342,14 @@ legend {
   font-size: 1.2em;
   color: #1f636f;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   gap: 0.2rem;
   font-weight: 600;
 }
-.recipes__item::after {
-  content: url("../../assets/images/sushi.svg");
+.recipes__item::before {
+  content: url("assets/images/sushi.svg");
   display: block;
   width: 2rem;
 }
@@ -348,8 +366,10 @@ legend {
 .recipes__description {
   line-height: 1.65;
   color: rgb(39, 146, 125);
-  hyphens: manual;
+  hyphens: auto;
   font-weight: 600;
+  text-align: center;
+  margin-top: 2rem;
 }
 @media screen and (max-width: 480px) {
   .recipes__description {
@@ -449,7 +469,6 @@ legend {
 }
 
 .modal {
-  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -458,12 +477,16 @@ legend {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.modal--active {
+  display: block;
 }
 .modal__title {
   margin-block: 0.5rem;
 }
 .modal__content {
-  width: 70%;
+  width: 50%;
   border: 0.0625rem solid #888;
   padding: 1.25rem;
   margin: 15% auto;
@@ -484,7 +507,7 @@ legend {
 }
 
 .addRecipes__flag {
-  width: 8rem;
+  width: 18rem;
   padding-block: 0.5rem;
   padding-inline: 0.5rem;
   border-radius: 0.5rem;
@@ -495,19 +518,33 @@ legend {
   align-items: center;
   gap: 1rem;
   position: absolute;
-  right: -8rem;
   top: calc(50% - 2.25rem);
+  right: -18rem;
   transition: width 0.5s ease-in 0.25s, right 0.5s ease-in 0.25s;
 }
 .addRecipes__flag--active {
-  width: 18rem;
-  right: -18rem;
+  width: 7rem;
+  right: -7rem;
   transition: 0.5s ease-in 0.25s;
 }
 @media screen and (max-width: 480px) {
   .addRecipes__flag {
     display: none;
   }
+}
+.addRecipes__recipe {
+  width: 100%;
+  font-size: 1.5em;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.25s ease-in 0.35s, width 0.75s ease;
+}
+.addRecipes__recipe--none {
+  width: 0.5px;
+  opacity: 0;
+  transition: opacity 0.15s ease-in 0.15s, width 0.75s ease;
 }
 .addRecipes__display {
   width: 4rem;
@@ -524,20 +561,6 @@ legend {
   padding-bottom: 0.2rem;
   transition: transform 0.4s ease-out 0.35s;
 }
-.addRecipes__recipe {
-  width: 100%;
-  font-size: 1.5em;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  opacity: 1;
-  transition: opacity 0.25s ease-in 0.35s, width 0.75s ease;
-}
-.addRecipes__recipe--none {
-  width: 1px;
-  opacity: 0;
-  transition: opacity 0.15s ease-in 0.15s, width 0.75s ease;
-}
 
 .categories {
   width: 100%;
@@ -552,6 +575,7 @@ legend {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  transform: translateX(130rem);
 }
 .categories__show {
   transform: translateX(0);
@@ -658,12 +682,6 @@ legend {
 .register__recipe {
   margin-block: 1rem;
 }
-.register__list {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  gap: 1rem;
-}
 .register__wrapperList {
   min-height: 3rem;
   display: flex;
@@ -673,10 +691,37 @@ legend {
   gap: 1rem;
   margin-bottom: 1rem;
 }
+.register__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  gap: 1.2rem;
+}
+.register__item {
+  border-radius: 2rem;
+  background-image: linear-gradient(90deg, rgba(0, 255, 255, 0.732), rgba(78, 173, 189, 0.782), rgba(85, 189, 208, 0.512));
+  font-size: 1.35em;
+  color: rgb(40, 72, 76);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding-left: 1rem;
+  animation: move-to 4s ease infinite alternate-reverse;
+}
+.register__ingredient {
+  width: 87%;
+  outline: none;
+  padding: 0.2rem;
+}
 .register__btn {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+}
+.register__btn--remove:hover {
+  background-color: rgb(224, 72, 72);
 }
 .register__add {
   text-align: center;
@@ -719,7 +764,7 @@ legend {
   border-radius: 1rem;
   left: 1rem;
   bottom: 1.5rem;
-  background-image: linear-gradient(to left, rgba(63, 118, 169, 0.396), rgba(16, 112, 119, 0.379), rgba(48, 162, 164, 0.479), rgba(119, 172, 165, 0.4039215686));
+  background-image: linear-gradient(to left, rgba(17, 231, 174, 0.536), rgba(120, 230, 255, 0.843), rgba(134, 203, 205, 0.899), rgba(14, 115, 187, 0.8901960784));
   background-size: 500% 100%;
   transition: transform 0.4s ease-in-out, background-size 0.6s ease-out;
 }
