@@ -9,9 +9,9 @@ class RecipeCard {
     const $card = document.createElement("article");
     $card.className = "recipes__cards";
     $card.innerHTML = `
-        <div class="recipes__wrapper">
+        <div class="recipes__wrapper ">
           <h2 class="recipes__title"> ${this.title}</h2>
-          <p class="recipes__description">
+          <p class="recipes__description"  >
             ${this.description}
           </p>
         </div>
@@ -22,13 +22,15 @@ class RecipeCard {
         </ol>
         <ol class="recipes__list recipes__list--stpes">
               ${this.steps
-                .map(item => `<li class="recipes__item">${item}</li>`)
+                .map(item => `<li class="recipes__item"  >${item}</li>`)
                 .join("")}
         </ol>
         <div class="recipes__buttons">
           <button class="button button--settings">Editar</button>
           <button class="button button--remove">Eliminar</button>
-        </div>`;
+        </div>
+      <button class="register__btn--update">✔</button>`;
+
     return $card;
   }
 }
@@ -60,9 +62,8 @@ function inserRecipeCard() {
   const recipeCard = new RecipeCard(title, description, ingredients, steps);
   const $new_card = recipeCard.createRecipeCard();
   saveCard($new_card.outerHTML);
-  $main.insertAdjacentHTML("beforeend", $new_card);
+  $main.appendChild($new_card);
 }
 
+$save.addEventListener("click", inserRecipeCard);
 $data.forEach(card => $main.insertAdjacentHTML("beforeend", card));
-
-$save.addEventListener("click", () => inserRecipeCard());

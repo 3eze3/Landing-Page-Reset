@@ -117,7 +117,7 @@ legend {
 
 h1,
 h2 {
-  font-size: 3em;
+  font-size: 2.4em;
 }
 
 h3 {
@@ -148,7 +148,7 @@ li {
 }
 
 p {
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #88a09b;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -323,6 +323,7 @@ legend {
 }
 .recipes__cards {
   width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -352,6 +353,9 @@ legend {
   content: url("assets/images/sushi.svg");
   display: block;
   width: 2rem;
+}
+.recipes__wrapper {
+  width: 26rem;
 }
 @media screen and (max-width: 480px) {
   .recipes__wrapper {
@@ -722,6 +726,21 @@ legend {
 }
 .register__btn--remove:hover {
   background-color: rgb(224, 72, 72);
+}
+.register__btn--update {
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.25em;
+  border-radius: 20%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+.register__btn--active {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
 }
 .register__add {
   text-align: center;
